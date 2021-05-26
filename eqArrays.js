@@ -7,17 +7,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  // joinArr1 = arr1.join();
-  // joinArr2 = arr2.join();
-  // if (joinArr1 === joinArr2) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
   let decider = true;
   for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-      decider = true;
+    if(arr1.length === arr2.length) {
+      if (arr1[i] === arr2[i]) {
+        decider = true;
+      } else {
+        decider = false;
+      }
+      
     } else {
       decider = false;
     }
