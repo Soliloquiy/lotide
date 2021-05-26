@@ -13,16 +13,17 @@ const eqArrays = function(arr1, arr2) {
     }
   }
   return decider;
-}
+};
 
-const assertArraysEqual = function(decider) {
-  if (decider) {
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(String.fromCodePoint(0x2705) + ` Assertion Passed: Arrays are equal`);
   } else {
     console.log(String.fromCodePoint(0x274C) + ` Assertion Failed: Arrays are not equal`);
   }
-}
+};
 
-assertArraysEqual((eqArrays([1, 2, 3], [1, 2, 3]))) // => false
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]));
+assertArraysEqual([1, 2, 3], [1, 2, 3])
+
+assertArraysEqual([1, 2, 3], [1, 2, 3, 4]);
