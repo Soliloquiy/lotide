@@ -26,9 +26,11 @@ const assertArraysEqual = function(actual, expected) {
 const letterPositions = function(sentence) {
   const results = {};
   for (let i = 0; i < sentence.length; i++) {
+//check entire object for letter. If it exists, push into array
     if(results[sentence[i]]) {
       results[sentence[i]].push(i);
     } else {
+//if letter does not exist, create key value pair for an array to push in values
       results[sentence[i]] = [i];
     }
   }
@@ -38,3 +40,5 @@ const letterPositions = function(sentence) {
 console.log(letterPositions("hello"))
 
 assertArraysEqual(letterPositions("hello").l, [2, 3] )
+
+module.exports = letterPositions;

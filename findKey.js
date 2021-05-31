@@ -10,6 +10,7 @@ const findKey = function (object, callback) {
   // console.log(Object.keys(object))
   for (let key of Object.keys(object)) {
     // console.log(object[key])
+    //Needs to call object inside object
     if (callback(object[key])) {
       return key;
     }
@@ -17,6 +18,7 @@ const findKey = function (object, callback) {
   return undefined;
 
 };
+//
 
 console.log(findKey({
   "Blue Hill": { stars: 1 },
@@ -37,3 +39,4 @@ let results = findKey({
 }, x => x.stars === 2)
 
 assertEqual(results, 'noma')
+module.exports = findKey;

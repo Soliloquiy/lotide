@@ -48,3 +48,5 @@ console.log(results2);
 
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 assertArraysEqual(results2, ['no', 'way'])
+
+module.exports = takeUntil;
