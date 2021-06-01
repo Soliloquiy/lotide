@@ -30,7 +30,7 @@ The following functions are currently implemented:
 * `tail(array)`: Returns all items in an array except for the first
 * `middle(array)`: Returns the middle item(s) in an array based on its length
 * `assertArraysEqual(actual, expected)`: Returns a console log based on arrays being compared while utilizing eqArrays
-* `function5(assertEqual)`: Returns true or false based on primitives being compared
+* `assertEqual(actual, expected)`: Returns true or false based on primitives being compared
 * `assertObjectsEqual(actual, expected)`: Returns a console log based on objects being compared while utilizing eqArrays
 * `countLetters(str)`: Returns object of number of times a letter appears in a given string
 * `countOnly(allItems, itemsToCount)`: Returns object with count for number of time value appears based on given list
