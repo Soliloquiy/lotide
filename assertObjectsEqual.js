@@ -32,7 +32,7 @@ const eqArrays = function(arr1, arr2) {
   return decider;
 };
 
-const assertArraysEqual = function(actual, expected) {
+const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
     console.log(String.fromCodePoint(0x2705) + ` Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
@@ -40,7 +40,4 @@ const assertArraysEqual = function(actual, expected) {
     console.log(String.fromCodePoint(0x274C) + ` Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
-
-
-assertArraysEqual({ a: '1', b: 2 }, { b: 2, a: '1' })
-module.exports = eqObjects;
+module.exports = assertObjectsEqual;
